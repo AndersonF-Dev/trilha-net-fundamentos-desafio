@@ -21,38 +21,25 @@ namespace DesafioFundamentos.Models
             veiculos.Add(placa); // Adiciona a placa à lista de veículos
             Console.WriteLine($"Veículo com placa {placa} foi adicionado com sucesso.");
 
-            
         }
 
         public void RemoverVeiculo()
         {
-            // Console.WriteLine("Digite a placa do veículo para remover:");
 
-            // Pedir para o usuário digitar a placa e armazenar na variável placa
+            //TODO: Pedir para o usuário digitar a placa e armazenar na variável placa
             Console.WriteLine("Digite a placa do veículo para remover:");
             string placa = Console.ReadLine();
-
-            // string placa = "";
-            // string placa = Console.ReadLine();
 
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
-                // Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
 
-                // TODO: Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
                 // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
-                
-                int horas = 0;
-                decimal valorTotal = 0;
-
-                valorTotal = precoInicial + (precoPorHora * horas);
 
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-                horas = Convert.ToInt32(Console.ReadLine()); // Lê e converte a quantidade de horas
+                int horas = Convert.ToInt32(Console.ReadLine()); // Lê e converte a quantidade de horas
 
-                // horas = Convert.ToInt32(Console.ReadLine());
-                // Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                decimal valorTotal = precoInicial + (precoPorHora * horas);
 
                 // TODO: Remover a placa digitada da lista de veículos
                 veiculos.Remove(placa);
